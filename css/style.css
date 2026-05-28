@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Genos', sans-serif;
+    line-height: 1.6;
+    color: #443e71;
+    overflow-x: hidden;
+}
+
+/* Tipografía para encabezados */
+h1, h2, h3 {
+    font-family: 'Spicy Rice', cursive;
+}
+
+/* Header: Fondo oscuro y navegación alineada horizontalmente */
+header {
+    background-color: #443e71;
+    padding: 1rem 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    color: #ffe2bc;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #fc913a;
+}
+
+/* Sección Hero: Columnas flexibles con alineación vertical centrada */
+.hero {
+    background-color: #ffe2bc;
+    padding: 100px 10%;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-left {
+    flex: 1;
+}
+
+.hero-left h1 {
+    font-size: 4rem;
+    color: #443e71;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #fc913a;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 8px solid #815bff;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Estilo común para botones de acción */
+.btn-cta {
+    display: inline-block;
+    background-color: #815bff;
+    color: #ffffff;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Spicy Rice', cursive;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cta:hover {
+    background-color: #fc913a;
+    transform: scale(1.05);
+}
+
+/* Secciones de Tarjetas: Flexbox para layouts de 3 y 4 columnas */
+.sobre-mi, .proyectos, .habilidades, .contacto {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 60px;
+    color: #443e71;
+}
+
+.cards-container-4, .cards-container-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card, .project-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    width: 280px;
+}
+
+.card:hover, .project-card:hover {
+    transform: translateY(-10px);
+}
+
+.card img, .project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3, .project-info h3 {
+    padding: 15px;
+    color: #815bff;
+}
+
+.card p, .project-info p {
+    padding: 0 15px 20px 15px;
+}
+
+/* Ajuste de colores alternos según requisitos */
+.proyectos { background-color: #c8ceff; }
+.habilidades { background-color: #ffe2bc; }
+.contacto { background-color: #c8ceff; }
+
+/* Sección Habilidades: Barras de progreso estilizadas */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.skill-item {
+    width: 45%;
+}
+
+.skill-item p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.progress-bar {
+    background-color: #ffffff;
+    border-radius: 20px;
+    height: 30px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #815bff;
+    height: 100%;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+/* Sección Contacto: Flexbox para dividir información y formulario */
+.contacto-container {
+    display: flex;
+    gap: 60px;
+}
+
+.contacto-text, .contacto-form {
+    flex: 1;
+}
+
+.contacto-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contacto-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto-form input, .contacto-form textarea {
+    padding: 15px;
+    border: 2px solid #815bff;
+    border-radius: 10px;
+    font-family: 'Genos', sans-serif;
+    font-size: 1.1rem;
+}
+
+/* Footer: Distribución espacial con logo a la izquierda y social centrado */
+footer {
+    background-color: #443e71;
+    color: #ffe2bc;
+    padding: 50px 10%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-logo {
+    align-self: flex-start;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: #c8ceff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #fc913a;
+}
+
+.copyright {
+    margin-top: 20px;
+    opacity: 0.7;
+}
